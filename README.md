@@ -1,4 +1,4 @@
-solar
-=====
+Git test
+========
 
 Vpravi z programuvanya
