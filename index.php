@@ -208,7 +208,11 @@
 	}
 	echo "<br>";
 	echo "Lesson 19 - connect to mysql db.";
-	
+	$db = mysql_connect("localhost", "root", "");
+	mysql_select_db("vacancy", $db);
+	$sql = "INSERT INTO vacancy ( name, cost) VALUES ('Admin cloude', '24000'); 
+	mysql_query($sql, $conn);"
+	mysql_close($db);
  ?>
  </body>
 </html>
