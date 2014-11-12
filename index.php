@@ -206,7 +206,8 @@
 	else {
 		echo " Posle G ";
 	}
-	
+	echo "<br>";
+	echo "Lesson 19 - connect to mysql db.";
 	
  ?>
  </body>
