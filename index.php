@@ -208,11 +208,23 @@
 	}
 	echo "<br>";
 	echo "Lesson 19 - connect to mysql db.";
+
+
+
+#	$link = mysqli_connect("localhost", "root", "","lessons");
+#	if (mysqli_query($link, "INSERT INTO 'vacancy' ( id, name, cost) values ('1','Admin Unix', '1200')") === TRUE) {
+#    printf("Таблица myCity успешно создана.\n");
+#	}
+
 	$db = mysql_connect("localhost", "root", "");
-	mysql_select_db("vacancy", $db);
-	$sql = "INSERT INTO vacancy ( name, cost) VALUES ('Admin cloude', '24000'); 
-	mysql_query($sql, $conn);"
-	mysql_close($db);
- ?>
+	mysql_select_db("lessons", $db);
+	$sql = "INSERT INTO 'vacancy' ( id, name, cost) values ('1','Admin Unix', '1200')";
+	mysqli_query($sql, $conn);
+#	mysql_close($db);
+
+	
+
+
+	?>
  </body>
 </html>
