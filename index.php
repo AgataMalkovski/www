@@ -222,9 +222,6 @@
 	mysqli_query($sql, $conn);
 #	mysql_close($db);
 
-	
-
-
 	?>
  </body>
 </html>
