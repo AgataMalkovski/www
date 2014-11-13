@@ -209,15 +209,16 @@
 	echo "<br>";
 	echo "Lesson 19 - connect to mysql db.";
 
-#	$link = mysqli_connect("localhost", "root", "","lessons");
-#	if (mysqli_query($link, "INSERT INTO 'vacancy' ( id, name, cost) values ('1','Admin Unix', '1200')") === TRUE) {
-#    printf("Таблица myCity успешно создана.\n");
-#	}
+	// нормально работает и + компактен
+	$link = mysqli_connect("localhost", "root", "","lessons");
+	$sql = "insert INTO vacancy ( name, cost) value ('Admin DBA MySQL', '18800')";
+	mysqli_query($link, $sql);
 
-	$db = mysql_connect("localhost", "root", "");
-	mysql_select_db("lessons", $db);
-	$sql = "INSERT INTO 'vacancy' ( id, name, cost) values ('1','Admin Unix', '1200')";
-	mysqli_query($sql, $conn);
+	// тоже работает но дофига кода
+#	$db = mysql_connect("localhost", "root", "");
+#	mysql_select_db("lessons", $db);
+#	$sql = "INSERT INTO vacancy (name, cost) value ('Admin Unix', '1600')";
+#	mysql_query($sql);
 #	mysql_close($db);
 
 	?>
